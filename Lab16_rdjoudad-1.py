@@ -8,6 +8,17 @@ CSV file used to create line plot
 
 from pathlib import Path
 import csv
-import matplotlib as plt
+import matplotlib.pyplot as plt
+import datetime
 
-path = Path('unit16programmingassignment/OHUR.csv')
+path = Path('OHUR.csv')
+lines = path.read_text(encoding='utf-8').splitlines()
+
+reader = csv.reader(lines)
+header = next(reader)
+
+print(header)
+
+dates = []
+percentages = []
+
