@@ -9,7 +9,7 @@ CSV file used to create line plot
 from pathlib import Path
 import csv
 import matplotlib.pyplot as plt
-import datetime
+from datetime import datetime
 
 path = Path('OHUR.csv')
 lines = path.read_text(encoding='utf-8').splitlines()
@@ -21,4 +21,10 @@ print(header)
 
 dates = []
 percentages = []
+for row in reader:
+    date = datetime.strptime(row [0], '%Y-%m-%d')
+    percentage = float(row[1])
+    dates.append(date)
+    percentages.append(percentage)
 
+print(dates[0], percentages[0])
