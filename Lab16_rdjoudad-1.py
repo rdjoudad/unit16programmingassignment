@@ -20,7 +20,7 @@ header = next(reader)
 dates = []
 percentages = []
 
-for row in reader:
+for index, row in enumerate(reader):
     try:
         date = datetime.strptime(row [0], '%Y-%m-%d')
         percentage = float(row[1])
@@ -28,4 +28,12 @@ for row in reader:
         percentages.append(percentage)
     except ValueError:
         print(f"Row {row}: Missing data")
-        
+
+my_fig, my_ax = plt.subplots()
+graph_title = "Ohio Unemployment (by Month): 1976-2022"
+my_ax.set_title(graph_title, fontsize=30)
+my_ax.set_xlabel('Date', fontsize=17)
+my_ax.set_ylabel('Unemp Rate', fontsize=17)
+my_ax.plot(dates, percentages)
+
+
