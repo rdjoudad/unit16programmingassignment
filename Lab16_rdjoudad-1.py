@@ -1,8 +1,8 @@
 """
-Ohio Unemployment Data Mapping
+Ohio Unemployment Data Mapping Program
 Ryma Djoudad
-Create a graph that visualizes data read from a file
-CSV file used to create line plot
+Create a graph that visualizes data read from a file, puts it on a graph
+CSV file used to create line plot (Inspired by Python Crash Course, 3rd ed)
 05/06/2026
 """
 
