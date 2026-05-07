@@ -29,7 +29,7 @@ for index, row in enumerate(reader):
     except ValueError:
         print(f"Row {row}: Missing data")
 
-plt.style.use('seaborn-v0_8-whitegrid')
+plt.style.use('seaborn-v0_8')
 my_fig, my_ax = plt.subplots()
 graph_title = "Ohio Unemployment (by Month): 1976-2022"
 my_ax.set_title(graph_title, fontsize=20)
